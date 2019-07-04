@@ -3,8 +3,6 @@ import styled from "@emotion/styled";
 export const CardWrapper = styled.div`
   margin-bottom: 60px;
 
-  max-width: 445px;
-
   img {
     max-width: 80%;
   }
@@ -20,12 +18,26 @@ export const CardWrapper = styled.div`
   }
 `;
 
-export const AppName = styled.h1`
+export const Name = styled.h1`
   font-size: 18px;
-  font-style: italic;
   font-weight: 500;
+  font-style: italic;
 `;
 
-export const AppDescription = styled.p`
-  margin-bottom: 30px;
+export const Duration = styled.h2`
+  font-size: 17px;
+  font-weight: 400;
+  margin-bottom: 26px;
+`;
+
+export const Description = styled.div`
+  ul {
+    li {
+      margin-bottom: 8px;
+    }
+
+    li:last-child {
+      margin-bottom: 0;
+    }
+  }
 `;

@@ -2,6 +2,8 @@ import React from "react";
 import Nav from "../components/Nav/Nav";
 import PageLayout, { PageContainer } from "../layouts/PageLayout/PageLayout";
 import Heading from "../components/Heading/Heading";
+import EducationCard from "../components/EducationCard/EducationCard";
+import AcademicAwardCard from "../components/AcademicAwardCard/AcademicAwardCard";
 import withData from "../utils/apollo";
 import { useQuery } from "@apollo/react-hooks";
 import { gql } from "apollo-boost";
@@ -37,14 +39,28 @@ const Education = () => {
         {loading || error ? (
           <div>Loading...</div>
         ) : (
-          <span>{data.educationExperiences.length} Education Experiences</span>
+          data.educationExperiences.map(educationExperience => {
+            return (
+              <EducationCard
+                key={educationExperience.institution}
+                educationExperience={educationExperience}
+              />
+            );
+          })
         )}
         <Heading>Academic Awards</Heading>
 
         {loading || error ? (
           <div>Loading...</div>
         ) : (
-          <span>{data.academicAwards.length} Academic Awards</span>
+          data.academicAwards.map(academicAward => {
+            return (
+              <AcademicAwardCard
+                key={academicAward.award}
+                academicAward={academicAward}
+              />
+            );
+          })
         )}
       </PageContainer>
     </PageLayout>
