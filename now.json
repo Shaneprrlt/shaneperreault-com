@@ -1,6 +1,7 @@
 {
   "name": "shaneperreault.com",
   "version": 2,
+  "alias": "shaneperreault.com",
   "builds": [{ "src": "next.config.js", "use": "@now/next" }],
   "env": {
     "REACT_GRAPHQL_API_URL": "https://api.shaneperreault.com"
