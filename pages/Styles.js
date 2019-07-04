@@ -30,3 +30,10 @@ export const ButtonContainer = styled.div`
     }
   }
 `;
+
+export const ContactParagraph = styled.div`
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 400;
+  margin-bottom: 30px;
+`;
