@@ -10,5 +10,9 @@ module.exports = {
 
     config.plugins.push(new webpack.EnvironmentPlugin(localEnv));
     return config;
-  }
+  },
+  env: {
+    REACT_GRAPHQL_API_URL: process.env.REACT_GRAPHQL_API_URL
+  },
+  target: "serverless"
 };
