@@ -101,6 +101,7 @@ export const PageContainer = styled.div`
   @media (max-width: 820px) {
     margin: 0px 30px;
     margin-top: 0px;
+    margin-bottom: 50px;
   }
 `;
 
