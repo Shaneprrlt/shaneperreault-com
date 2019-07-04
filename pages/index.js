@@ -5,6 +5,7 @@ import { Paragraph, ButtonContainer } from "./Styles";
 import Button from "../components/Button/Button";
 import Heading from "../components/Heading/Heading";
 import Router from "next/router";
+import withData from "../utils/apollo";
 
 const RESUME_PDF_URL =
   "https://shaneprrlt-s3.s3.amazonaws.com/Shane+Perreault+Resume+v2.1.3.pdf";
@@ -61,4 +62,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default withData(Home);
