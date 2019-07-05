@@ -68,6 +68,10 @@ const MobileNavigationContainer = styled(({ className, children }) => {
   }
 `;
 
+const SocialLinkMobileOnly = styled(MobileOnly)`
+  margin-bottom: 80px;
+`;
+
 const PageLayout = ({ children, nav }) => {
   return (
     <>
@@ -83,11 +87,11 @@ const PageLayout = ({ children, nav }) => {
         <DesktopNavigationContainer>{nav}</DesktopNavigationContainer>
         {children}
 
-        <MobileOnly>
+        <SocialLinkMobileOnly>
           <CenterContainer>
             <SocialLink />
           </CenterContainer>
-        </MobileOnly>
+        </SocialLinkMobileOnly>
       </Wrapper>
     </>
   );
