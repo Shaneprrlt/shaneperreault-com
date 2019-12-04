@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Head from "../../components/head";
 import DesktopOnly from "../../components/DesktopOnly/DesktopOnly";
 import MobileOnly from "../../components/MobileOnly/MobileOnly";
 import { Wrapper, HeadingContainer, CenterContainer } from "./Styles";
 import styled from "@emotion/styled";
 import SocialLink from "../../components/SocialLinks/SocialLinks";
+import { initGA, logPageView } from "../../utils/analytics"
 
 const Heading = styled.h1`
   font-family: Roboto Mono;
@@ -73,6 +74,15 @@ const SocialLinkMobileOnly = styled(MobileOnly)`
 `;
 
 const PageLayout = ({ children, nav }) => {
+
+  useEffect(() => {
+    if(!window.GA_INITIALIZED) {
+      initGA()
+      window.GA_INITIALIZED = true
+    }
+    logPageView()
+  }, [])
+
   return (
     <>
       <Head title="Shane Perreault - Software Engineer" />

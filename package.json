@@ -19,6 +19,7 @@
     "react": "^16.8.6",
     "react-apollo": "^2.5.8",
     "react-dom": "^16.8.6",
+    "react-ga": "^2.7.0",
     "react-image-lightbox": "^5.1.0",
     "webpack": "^4.35.2"
   }
