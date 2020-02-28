@@ -8,7 +8,7 @@ import Router from "next/router";
 import withData from "../utils/apollo";
 
 const RESUME_PDF_URL =
-  "https://shaneprrlt-s3.s3.amazonaws.com/Shane+Perreault+Resume+v2.1.5.pdf";
+  "https://shaneprrlt-s3.s3.amazonaws.com/Shane+Perreault+Resume+v3.pdf";
 
 const Home = () => {
   const openResume = () => {
