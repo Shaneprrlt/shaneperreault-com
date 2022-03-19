@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React, { useState } from "react";
 import Button from "../Button/Button";
 import { CardWrapper, AppName, AppDescription } from "./Styles";

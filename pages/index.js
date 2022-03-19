@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import React from "react";
 import Nav from "../components/Nav/Nav";
 import PageLayout, { PageContainer } from "../layouts/PageLayout/PageLayout";

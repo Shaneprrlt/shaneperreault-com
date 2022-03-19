@@ -1,3 +1,5 @@
+/* eslint-disable @next/next/no-page-custom-font */
+/* eslint-disable @next/next/no-css-tags */
 import React from "react";
 import NextHead from "next/head";
 import { string } from "prop-types";

@@ -10,7 +10,7 @@ const ContactForm = () => {
     <FormWrapper>
       <form
         name="simple-contact-form"
-        accept-charset="utf-8"
+        acceptCharset="utf-8"
         action={FORM_ACTION}
         method={FORM_METHOD}
       >
