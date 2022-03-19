@@ -15,6 +15,15 @@ const Home = () => {
     window.open(RESUME_PDF_URL, "_blank");
   };
 
+  const numYearsInTech = () => {
+    const today = new Date();
+    const startDate = new Date("2016-09-01");
+    const diffTime = Math.abs(today - startDate);
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffYears = diffDays / 365;
+    return `${Math.floor(diffYears)}+ years`;
+  };
+
   return (
     <PageLayout nav={<Nav />}>
       <PageContainer>
@@ -28,8 +37,8 @@ const Home = () => {
         />
 
         <Paragraph>
-          Full stack software engineer with 3+ years of experience working in
-          internet startups.
+          Full stack software engineer with <span>{numYearsInTech}</span> of
+          experience working in internet startups.
         </Paragraph>
 
         <Paragraph>
@@ -50,7 +59,7 @@ const Home = () => {
         </Paragraph>
 
         <ButtonContainer>
-          <Button style="primary" onClick={e => Router.push("/contact")}>
+          <Button style="primary" onClick={(e) => Router.push("/contact")}>
             Talk to me
           </Button>
           <Button style="secondary" onClick={openResume}>
