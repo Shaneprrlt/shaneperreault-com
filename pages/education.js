@@ -66,4 +66,4 @@ const Education = () => {
     </PageLayout>
   );
 };
-export default withData(Education);
+export default withData({ ssr: true })(Education);

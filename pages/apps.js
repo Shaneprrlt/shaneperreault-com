@@ -40,4 +40,4 @@ const Apps = props => {
   );
 };
 
-export default withData(Apps);
+export default withData({ ssr: true })(Apps);

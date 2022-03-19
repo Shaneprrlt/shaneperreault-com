@@ -19,4 +19,4 @@ const Contact = () => (
   </PageLayout>
 );
 
-export default withData(Contact);
+export default withData({ ssr: true })(Contact);

@@ -45,4 +45,4 @@ const Work = () => {
   );
 };
 
-export default withData(Work);
+export default withData({ ssr: true })(Work);

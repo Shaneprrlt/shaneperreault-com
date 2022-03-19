@@ -38,7 +38,7 @@ const Home = () => {
         />
 
         <Paragraph>
-          Full stack software engineer with <span>{numYearsInTech}</span> of
+          Full stack software engineer with <span>{numYearsInTech()}</span> of
           experience working in internet startups.
         </Paragraph>
 
@@ -72,4 +72,4 @@ const Home = () => {
   );
 };
 
-export default withData(Home);
+export default Home;

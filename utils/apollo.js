@@ -1,10 +1,10 @@
-import { withData } from "next-apollo";
-import { HttpLink } from "apollo-link-http";
+import fetch from "cross-fetch";
+import { withApollo } from "next-apollo";
+import { ApolloClient, InMemoryCache, HttpLink } from "@apollo/client";
 
-const config = {
-  link: new HttpLink({
-    uri: process.env.REACT_GRAPHQL_API_URL
-  })
-};
+const apolloClient = new ApolloClient({
+  link: new HttpLink({ uri: process.env.REACT_GRAPHQL_API_URL, fetch }),
+  cache: new InMemoryCache(),
+});
 
-export default withData(config);
+export default withApollo(apolloClient);
